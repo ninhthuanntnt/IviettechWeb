@@ -1,0 +1,625 @@
+body{
+	margin:0;
+}
+#container{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	font-family: Arial, Helvitica, sans-serif;
+	font-size: 95%;
+}
+ul{
+	list-style-type: none;
+	padding: 0;
+}
+h2,h1{font-weight: normal;}
+a{text-decoration: none;}
+p{font-size: 14px; }
+.clear{clear:both;}
+#header{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 1%;
+	justify-content: center;
+	position: relative;
+}
+#mobile_menu{
+	display: none;
+}
+#simple_menu{
+	display: none;
+}
+#header > hr{
+	width: 100%;
+	border: none;
+	border-top: 4px solid red;
+	position: absolute;
+	top: 50px;
+}
+#header > img{
+	width: 230px;
+	height:50px;
+	margin-right: 1%;
+}
+#header > .menu a{
+	color: black;
+	padding-bottom: 23px;
+}
+#header a:hover{
+	color:red;
+}
+#header .menu > li:hover > a{
+	background: url(images/Capture.PNG) no-repeat;
+	background-position: center;
+}
+.line_menu{
+	display: none;
+	width: 100%;
+	border: none;
+	border-top: 4px solid orange;
+	z-index: 1;
+}
+#header .menu li:hover .line_menu{
+	display: block;
+	position: absolute;
+	top: 27px;
+}
+.menu{
+	padding: 0;
+	width: 800px;
+	display: flex;
+	justify-content: space-around;
+	
+}
+.menu > li{
+	flex-direction: row;
+	position: relative;
+	margin-top: 1%;
+	flex: 1 1 auto;
+	border-right: 1px solid black;
+	text-align: center;
+}
+.menu > li:last-child{
+	border-right: none;
+	height: 0;
+}
+.sub_menu{
+	width: 100%;
+	display: none;	
+	position: absolute;
+	text-align: left;
+	margin-top: 23px;
+	background-color: white;
+}
+.sub_menu > li{
+	padding: 5%;
+	position: relative;
+	border-bottom: 1px solid red;
+	background-color: white;
+}
+.menu > li:hover .sub_menu{
+	display: block;
+}
+.sub_menu_indent{
+	display: none;
+	width: 100%;
+	position: absolute;
+	top:0%;
+	left:100%; 
+	background-color: white;
+}
+.sub_menu_indent > li{
+	width: 100%;
+	padding: 5%;
+	border-bottom: 1px solid red;
+	background-color: white;
+}
+.sub_menu > li:hover .sub_menu_indent{
+	display: block;
+}
+.sub_menu > li:hover{
+	color: red;
+}
+.sub_menu > li:hover .sub_menu_indent > li:first-child{
+	box-shadow: -3px 0px 30px -10px grey;
+}
+/*CSS Banner*/
+#banner img{
+	width: 100%;
+	margin-top: 0.5%;
+	margin-bottom: -0.5%;
+}
+/*CSS RESGISTER*/
+#register_info{
+	width: 98%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: #ca3438;
+	padding: 1%;
+	color: white;
+}
+.headContent{
+	border-bottom: 1px dashed #F08080;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+.headContent > h2{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 65px;
+}
+.register{
+	padding: 0% 0.8% 0% 0.8%;
+	width: 220px;
+	display: flex;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	flex-direction: column;
+	border: 1px dashed white;
+	border-radius: 5px;
+}
+.register .headContent{
+	background: url(images/logoHead.PNG) no-repeat;
+	background-size: 65px;
+}
+#register-form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+#register-form > label{
+	color: #b3b3b3;
+}
+#register-form > input, #subject, #register-form > textarea{
+	margin-bottom: 2%;
+	margin-top: 1%;
+	background-color: #DB777a;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 2% 1% 2% 1%;
+}
+#register-form > input:focus, #subject:focus, #register-form > textarea:focus{outline: none;}
+#register-form > input:last-child{
+	padding: 5% 0% 5% 0%;
+	height: 10%;
+	font-size: 100%;
+	text-align: center;
+	font-weight: bold;
+	background-color: #FF8C00;
+	margin-top: 10%;
+	margin-bottom: 8%;
+}
+#error_reg{padding: 1%;}
+#register-form > input[type="button"]:hover{
+	background-color: #FFB900;
+}
+#subject > option{
+	color: black;
+	background-color: white;
+}
+#register-form > input::placeholder, #register-form > textarea::placeholder{color:white; padding: 1%;}
+
+.info{
+	margin-left: 1%;
+	width: 700px;
+	border: 1px dashed white;
+	border-radius: 5px;
+	padding: 0 1% 0% 1%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+.info .headContent{
+	background: url(images/logoHead2.PNG) no-repeat;
+	background-size: 60px;
+	background-position: 0 5px;
+}
+.info > ul{
+	display: flex;
+	flex-direction: row;
+	flex: 1 1 auto;
+	justify-content: space-around;
+	text-align: center;	
+}
+.info > ul > li{
+	width: 23%;
+}
+.info > ul > li > img{
+	width: 70%;
+	border: 1px dashed white;
+	border-radius: 50%;
+	padding: 3%;
+}
+/*CSS introduce*/
+#introduce{
+	padding: 5% 15% 5% 15%;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+}
+#introduce > img{
+	width: 250px;
+	height: 250px;
+	border: 1px solid white;
+	border-radius: 50%;
+	padding: 0.5%;
+	margin-right: 5%;
+	box-shadow: 0px 5px 15px -2px grey;
+}
+#introduce > .content{
+	width: 500px;
+	position: relative;
+}
+.headContent2{
+	border-bottom: 1px dashed grey;
+	padding: 1%;
+	margin-bottom: 2%;
+}
+#introduce > .content > .headContent2 > img{
+	width: 50%; 
+}
+.button{
+	width: 70px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 0.5% 1% 0.5% 1%;
+	background-color: #cc0000;
+	border-radius: 5px;
+}
+.button:hover{
+	background-color: #ff6b00;
+}
+.button > a{
+	color: white;
+}
+/*CSS Schedule*/
+#schedule{
+	width: 98%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: #ca3438;
+	color: white;
+	padding: 1%;
+}
+#schedule p{
+	line-height: 20px;
+}
+#schedule a{
+	color: white;
+}
+#schedule a:hover{
+	text-decoration: underline;
+}
+.part{
+	display: flex;
+	flex-direction: column;
+}
+.part > li{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 50%;
+}
+.part > li > p{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.partLeft{
+	width: 680px;
+}
+.partLeft > .headContent{
+	background: url(images/logoHead4.PNG) no-repeat;
+	background-size: 60px;
+	background-position: left;
+}
+.partLeft li{
+	margin-bottom: 4%;
+}
+#schedule_content{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.partLeft .part{
+	width: 50%;
+}
+.partLeft img{
+	width: 60px;
+	height: 60px;
+	margin-right: 5%;
+	border-radius: 5px;
+}
+.partRight{
+	margin-left: 2%;
+	padding: 0% 1% 0% 1%;
+	width: 280px;
+	border: 1px dashed white;
+	border-radius: 3px;
+}
+.partRight > .headContent{
+	background: url(images/logoHead3.PNG) no-repeat;
+	background-size: 53px;
+	background-position: left;
+}
+.partRight img{
+	margin-right: 4%;
+	width: 15%;
+}
+.partRight > .part >li{
+	width: 100%;
+	padding: 2% 0% 2% 0%;
+	border-bottom: 1px dashed #F08080;
+}
+.partRight > .part > li:last-child{
+	border: none;
+}
+/*CSS NEWS*/
+#news{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.headContent2 > h2{
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+#newsLeft{
+	width: 600px;
+}	
+#news_event{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 1% 1% 5% 1%;
+	position: relative;
+}
+#news_event > .headContent2{
+	padding-left: 60px;
+	margin-bottom: 2%;
+	background: url(images/news_event.PNG) no-repeat;
+	background-size: 55px;
+	background-position: 0 7px;
+}
+
+#news_event > .child_content > img{
+	float: left;
+	margin-right: 3%;
+	width: 230px;
+}
+
+#oldNews{
+	width: 100%;
+	padding: 1%;
+}
+#oldNews > .headContent2{
+	margin-bottom: 2%;
+}
+
+#oldNews > .child_content{
+	display: flex;
+	flex-direction: row;
+}
+#oldNews > .child_content > div{
+	width: 50%;
+	margin-left: 2%;
+}
+#oldNews > .child_content img{
+	width: 130px;
+	float: left;
+	margin-right: 5%;
+}
+#oldNews > .child_content p{
+	margin-top: 0;
+}
+
+#student_comments{
+	padding-left: 1%;
+	width: 100%;
+}
+.comments{
+	display: flex;
+	flex-direction: row;
+	background-color: #e6e6e6;
+	padding: 3%;
+}
+.comments img{
+	width: 120px;
+	height: 130px;
+	border-radius: 50%;
+	padding: 1%;
+	background-color: #ca3438;
+	margin-right: 3%;
+}
+.child_comments b{
+	font-size: 400%;
+	line-height: 5px;
+}
+.child_comments > p:nth-child(2){
+	text-align: center;
+	width: 80%;
+	color: blue;
+	margin: 1%;
+}
+.child_comments > b{
+	width: 10%;
+	float: right;
+	line-height: -50px;
+}
+.student_avatars{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.student_avatar > li{
+	width: 15%;
+}
+.student_avatars > li > img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	padding: 6%;
+	background-color: #ca3438;
+}
+.student_avatars > li:hover > img{
+	width: 70px;
+	height: 70px;
+}
+
+#newsRight{
+	width: 400px;
+	margin-left: 2%; 
+}
+#newsRight .headContent2{
+	margin-top: 2.5%;
+	padding-bottom: 2%;
+	padding-left: 60px;
+	background: url(images/logohead5.PNG) no-repeat;
+	background-size: 55px;
+	background-position: 0 2px;
+}
+#newsRight a{
+	color: #ca3438;
+	font-weight: bold;
+}
+#newsRight a:hover{
+	color: green;
+}
+.jobs_list{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.jobs_list > li{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	padding: 1%;
+}
+.jobs_list > li > p{
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+.jobs_list img{
+	width: 70px;
+	height: 70px;
+	border-radius: 3px;
+	margin-right: 3%;
+}
+
+#company{
+	width: 100%;
+}
+#company .headContent2{
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+#company p{
+	margin-top: 0;
+}
+#company  img{
+	width: 80px;
+	height: 70px;
+	margin-right: 2%;
+}
+.company_list{
+	display: flex;
+	flex-direction: column;
+}
+.company_list > li{
+	display: flex;
+	flex-direction: row;
+}
+
+/*CSS FOOTER*/
+#footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;	
+	background-color: #b3b3b3;
+	color: white;
+}
+#footer p{
+	font-size: 12px;
+}
+#footer a{
+	color: white;
+}
+
+/*Responsive*/
+@media screen and (max-width: 768px){
+	#header{
+		margin-bottom: 2%;
+		display: flex;
+		justify-content: center;
+	}
+	#header > img{
+		align-content: center;
+	}
+	#header hr{
+		width: 100%;
+	}
+	#mobile_menu{
+		display: block !important;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+	.menu{
+		display: none !important;
+	}
+	.disappear{
+		display: none;
+	}
+	#news{
+		justify-content: flex-start;
+	}
+	#newsLeft{
+		width: 98%;
+	}
+	#newsRight{
+		width: 96%;
+	}
+	#company > .headContent2{
+		padding-top: 1%;
+		padding-bottom: 2%;
+	}
+}
+@media screen and (max-width: 660px){
+	#register_info{
+		flex-wrap: wrap;
+	}
+	.register{
+		width: 100%;
+	}
+	#schedule{
+		flex-wrap: wrap;
+	}
+	.partRight{
+		width: 100%;
+		margin-left: 0;
+	}
+	.student_avatars{
+		flex-wrap: wrap;
+	}
+
+}
+@media screen and (max-width: 376px){
+	#schedule_content{
+		flex-direction: column;
+	}
+	#schedule_content .part{
+		margin-bottom: 0;
+		width: 100%;
+	}
+}
